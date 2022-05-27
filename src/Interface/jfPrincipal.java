@@ -92,6 +92,11 @@ public class jfPrincipal extends javax.swing.JFrame {
         jMenu2.add(jm_Consulta_Professor);
 
         jm_Consulta_Aluno.setText("Aluno");
+        jm_Consulta_Aluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_Consulta_AlunoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jm_Consulta_Aluno);
 
         jMenuBar1.add(jMenu2);
@@ -137,7 +142,7 @@ this.setExtendedState(MAXIMIZED_BOTH);
 
     private void jm_Cadastro_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_Cadastro_AlunoActionPerformed
         // TODO add your handling code here:
-        jfiAluno obj = new jfiAluno();
+        jfiAluno1 obj = new jfiAluno1();
         jdpPrincipal.add(obj);
         obj.setVisible(true);
     }//GEN-LAST:event_jm_Cadastro_AlunoActionPerformed
@@ -148,6 +153,13 @@ this.setExtendedState(MAXIMIZED_BOTH);
         jdpPrincipal.add(obj);
         obj.setVisible(true);
     }//GEN-LAST:event_jm_Consulta_ProfessorActionPerformed
+
+    private void jm_Consulta_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_Consulta_AlunoActionPerformed
+        // TODO add your handling code here:
+         consulta_Aluno obj = new consulta_Aluno();
+        jdpPrincipal.add(obj);
+        obj.setVisible(true);
+    }//GEN-LAST:event_jm_Consulta_AlunoActionPerformed
 
     /**
      * @param args the command line arguments
