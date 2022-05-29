@@ -70,7 +70,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btn_Cadastro_Aluno = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
         setClosable(true);
@@ -316,7 +316,12 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
 
         jButton4.setText("Limpar");
 
-        jButton5.setText("Sair");
+        btn_Cadastro_Aluno.setText("Sair");
+        btn_Cadastro_Aluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Cadastro_AlunoActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Excluir");
 
@@ -347,7 +352,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5))
+                .addComponent(btn_Cadastro_Aluno))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -368,7 +373,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
-                    .addComponent(jButton5)
+                    .addComponent(btn_Cadastro_Aluno)
                     .addComponent(jButton6)))
         );
 
@@ -387,13 +392,21 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField11ActionPerformed
 
+    private void btn_Cadastro_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Cadastro_AlunoActionPerformed
+        // TODO add your handling code here:
+         jfPrincipal obj = new jfPrincipal();
+    
+        this.dispose();
+        
+    }//GEN-LAST:event_btn_Cadastro_AlunoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Cadastro_Aluno;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
