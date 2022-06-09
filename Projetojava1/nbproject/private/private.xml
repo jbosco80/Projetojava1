@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/wj/Projetojava1/src/View/consulta_Aluno.java</file>
-            <file>file:/E:/wj/Projetojava1/src/View/jfiAluno1.java</file>
-            <file>file:/E:/wj/Projetojava1/src/controler/Conexao.java</file>
-            <file>file:/E:/wj/Projetojava1/src/controler/acessoBD.java</file>
-            <file>file:/E:/wj/Projetojava1/src/View/jfLogin.java</file>
-            <file>file:/E:/wj/Projetojava1/src/Model/Login.java</file>
-            <file>file:/E:/wj/Projetojava1/src/View/jfPrincipal.java</file>
-            <file>file:/E:/wj/Projetojava1/src/controler/pessoaBD.java</file>
-            <file>file:/E:/wj/Projetojava1/src/View/jficadastro.java</file>
-            <file>file:/E:/wj/Projetojava1/src/View/consulta_Professor.java</file>
-            <file>file:/E:/wj/Projetojava1/src/Model/Pessoa.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/Model/Login.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/controler/Conexao.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/View/jfLogin.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/View/jfPrincipal.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/controler/acessoBD.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/controler/pessoaBD.java</file>
+            <file>file:/C:/codigos_eclipse/Projetojava1/src/View/jficadastro.java</file>
         </group>
     </open-files>
 </project-private>

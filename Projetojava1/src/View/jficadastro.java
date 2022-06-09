@@ -63,7 +63,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
         ftexDataCadastro = new javax.swing.JFormattedTextField();
         ftexDataNascimento = new javax.swing.JFormattedTextField();
         ftexTelefone = new javax.swing.JFormattedTextField();
-        texCPF = new javax.swing.JFormattedTextField();
+        ftexCPF = new javax.swing.JFormattedTextField();
         jp_Informaçoes = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         texFormaçao_Profissional = new javax.swing.JTextField();
@@ -118,6 +118,11 @@ public class jficadastro extends javax.swing.JInternalFrame {
             ex.printStackTrace();
         }
         ftexDataNascimento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        ftexDataNascimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ftexDataNascimentoActionPerformed(evt);
+            }
+        });
 
         try {
             ftexTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#-########")));
@@ -131,7 +136,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
         });
 
         try {
-            texCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###.##")));
+            ftexCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###.##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -176,7 +181,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
                     .addGroup(jp_DadosLayout.createSequentialGroup()
                         .addGroup(jp_DadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
-                            .addComponent(texCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ftexCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ftexDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
@@ -214,7 +219,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(texCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ftexCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(146, Short.MAX_VALUE))
         );
 
@@ -358,13 +363,13 @@ public class jficadastro extends javax.swing.JInternalFrame {
             Telefone = ftexTelefone.getText();
             dataNascimento = ftexDataNascimento.getText();
            
-            CPF = texCPF.getText();
+            CPF = ftexCPF.getText();
             
             
               try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/login","root","");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/escola","root","");
             Statement stm = con.createStatement();
             if(stm.executeUpdate("INSERT into professor(Nome,DataCadastro,DataNascimento,Email,Telefone,CPF,Cidade,Endereco) values('"+Nome+"','"+dataCadastro+"','"+dataNascimento+"','"+Email+"','"+Telefone+"','"+CPF+"','"+Cidade+"','"+Endereco+"')")!=0)
           {
@@ -377,7 +382,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
                         texEmail.setText("");
                         ftexTelefone.setText("");
                        
-                         texCPF.setText("");
+                         ftexCPF.setText("");
                          
           }
             else
@@ -399,6 +404,10 @@ public class jficadastro extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ftexTelefoneActionPerformed
 
+    private void ftexDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftexDataNascimentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ftexDataNascimentoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_Cadastrar;
@@ -407,6 +416,7 @@ public class jficadastro extends javax.swing.JInternalFrame {
     private javax.swing.JButton btn_Naturalidade;
     private javax.swing.JButton btn_Pesquisar;
     private javax.swing.JButton btn_Sair;
+    private javax.swing.JFormattedTextField ftexCPF;
     private javax.swing.JFormattedTextField ftexDataCadastro;
     private javax.swing.JFormattedTextField ftexDataNascimento;
     private javax.swing.JFormattedTextField ftexTelefone;
@@ -426,7 +436,6 @@ public class jficadastro extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jp_Dados;
     private javax.swing.JPanel jp_Informaçoes;
     private javax.swing.JTabbedPane jt_Dados;
-    private javax.swing.JFormattedTextField texCPF;
     private javax.swing.JTextField texCidade;
     private javax.swing.JTextField texEmail;
     private javax.swing.JTextField texEnder;

@@ -37,7 +37,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        tex_Nome = new javax.swing.JTextField();
+        txtNomealu = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cbSexo = new javax.swing.JComboBox<>();
@@ -172,7 +172,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(texNaturalidade)
                                     .addComponent(jLabel7)))
-                            .addComponent(tex_Nome, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNomealu, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(texEndereço, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -224,7 +224,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tex_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomealu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ftexDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -399,7 +399,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
        
-            Nome = Nome.getText();           
+            Nome = texNome.getText();           
             Endereco = texEndereco.getText();
             Naturalidade = texNaturalidade.getText();
             EmailResponsavel = texEmail.getText();
@@ -419,7 +419,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
        try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/login","root","");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/escola","root","");
             Statement stm = con.createStatement();
             if(stm.executeUpdate("INSERT into aluno(Nome,Endereço,Naturalidade,EmailResponsavel,Telefone,dataNascimento,CEP,NomePai,NomeMae,RG,Sexo,UF,Deficiencia) values('"+Nome+"','"+Endereco+"','"+Naturalidade+"','"+EmailResponsavel+"','"+Telefone+"','"+dataNascimento+"','"+CEP+"','"+NomePai+"','"+NomeMae+"','"+RG+"','"+Sexo+"','"+UF+"','"+Deficiencia+"')")!=0)
           {
@@ -498,6 +498,6 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
     private javax.swing.JTextField texNomeMae;
     private javax.swing.JTextField texNomePai;
     private javax.swing.JFormattedTextField texRG;
-    private javax.swing.JTextField tex_Nome;
+    private javax.swing.JTextField txtNomealu;
     // End of variables declaration//GEN-END:variables
 }

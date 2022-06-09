@@ -126,9 +126,9 @@ public class jfLogin extends javax.swing.JFrame {
         {
         
             Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/login","root","");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/escola","root","");
 		Statement stm = con.createStatement();
-		ResultSet res = stm.executeQuery("SELECT Nome,senha from usuarios");
+		ResultSet res = stm.executeQuery("SELECT Nome,senha from admin");
 		while(res.next())
                     
                     {

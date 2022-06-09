@@ -46,7 +46,7 @@ public class Conexao {
         {
             if ((con == null) || (con.isClosed())) 
             {
-                con = DriverManager.getConnection("jdbc:mysql://localhost/agenda", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost/escola", "root", "");
                 System.out.println("Conexão estabelecida");
             }
         } 

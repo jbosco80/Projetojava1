@@ -30,11 +30,11 @@ public class acessoBD {
         try
         {
             stmt = connection.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM Admin");
+            ResultSet res = stmt.executeQuery("SELECT * FROM admin");
             
             while(res.next())
 	    {
-	        if(login.getNome().compareTo(res.getString("nome"))==0 && login.getSenha().compareTo(res.getString("senha"))==0)
+	        if(login.getNome().compareTo(res.getString("Nome"))==0 && login.getSenha().compareTo(res.getString("senha"))==0)
 		{
 		   status = true;
 		   
