@@ -37,7 +37,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        txtNomealu = new javax.swing.JTextField();
+        texNomeAluno = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         cbSexo = new javax.swing.JComboBox<>();
@@ -172,7 +172,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(texNaturalidade)
                                     .addComponent(jLabel7)))
-                            .addComponent(txtNomealu, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(texNomeAluno, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(texEndereço, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -224,7 +224,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNomealu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(texNomeAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ftexDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -399,7 +399,7 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
        
-            Nome = texNome.getText();           
+            Nome = texNomeAluno.getText();           
             Endereco = texEndereco.getText();
             Naturalidade = texNaturalidade.getText();
             EmailResponsavel = texEmail.getText();
@@ -421,17 +421,26 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost/escola","root","");
             Statement stm = con.createStatement();
-            if(stm.executeUpdate("INSERT into aluno(Nome,Endereço,Naturalidade,EmailResponsavel,Telefone,dataNascimento,CEP,NomePai,NomeMae,RG,Sexo,UF,Deficiencia) values('"+Nome+"','"+Endereco+"','"+Naturalidade+"','"+EmailResponsavel+"','"+Telefone+"','"+dataNascimento+"','"+CEP+"','"+NomePai+"','"+NomeMae+"','"+RG+"','"+Sexo+"','"+UF+"','"+Deficiencia+"')")!=0)
+            if(stm.executeUpdate("INSERT into aluno(Nome,Endereco,Naturalidade,EmailResponsavel,Telefone,dataNascimento,CEP,NomePai,NomeMae,RG,Sexo,UF,Deficiencia) values('"+Nome+"','"+Endereco+"','"+Naturalidade+"','"+EmailResponsavel+"','"+Telefone+"','"+dataNascimento+"','"+CEP+"','"+NomePai+"','"+NomeMae+"','"+RG+"','"+Sexo+"','"+UF+"','"+Deficiencia+"')")!=0)
           {
                 JOptionPane.showMessageDialog(null,"Cadastro realizado com sucesso!!!","Sucesso",JOptionPane.INFORMATION_MESSAGE);
-                        tex_Nome.setText("");
-                        ftexDataCadastro.setText("");
-                        ftexDataNascimento.setText("");
+                        texNomeAluno.setText("");
                         texEndereco.setText("");
-                        texCidade.setText("");
+                        texNaturalidade.setText("");
                         texEmail.setText("");
                         ftexTelefone.setText("");
-                       
+                        ftexDataNascimento.setText("");
+                        ftexCEP.setText("");
+                        texNomePai.setText("");
+                        texNomeMae.setText(""); 
+                        texRG.setText(""); 
+                        cbSexo.setText("");
+                        cbUF.setText("");
+                        cbDeficiencia.setText("");        
+                        ftexDataCadastro.setText("");
+                        
+                        texCidade.setText("");
+                                                                   
                          texCPF.setText("");
                          
           }
@@ -495,9 +504,9 @@ public class jfiAluno1 extends javax.swing.JInternalFrame {
     private javax.swing.JTextField texEmail;
     private javax.swing.JTextField texEndereço;
     private javax.swing.JTextField texNaturalidade;
+    private javax.swing.JTextField texNomeAluno;
     private javax.swing.JTextField texNomeMae;
     private javax.swing.JTextField texNomePai;
     private javax.swing.JFormattedTextField texRG;
-    private javax.swing.JTextField txtNomealu;
     // End of variables declaration//GEN-END:variables
 }
