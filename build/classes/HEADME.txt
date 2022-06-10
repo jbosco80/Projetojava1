@@ -1,1 +1,0 @@
-Projeto de um aplicativo Escolar para administrar e ser usado na Secretaria.
