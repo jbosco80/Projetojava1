@@ -34,10 +34,12 @@ public class jfLogin extends javax.swing.JFrame {
         texNome = new javax.swing.JTextField();
         btnSair = new javax.swing.JButton();
         btnEntrar = new javax.swing.JButton();
-        texSenha = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        texSenha = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(95, 148, 229));
 
         jLabel1.setText("nome");
 
@@ -64,7 +66,7 @@ public class jfLogin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addComponent(btnEntrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 577, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addGap(63, 63, 63))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -74,7 +76,7 @@ public class jfLogin extends javax.swing.JFrame {
                     .addComponent(texNome, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                     .addComponent(jLabel1)
                     .addComponent(texSenha))
-                .addContainerGap(578, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -85,9 +87,9 @@ public class jfLogin extends javax.swing.JFrame {
                 .addComponent(texNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(39, 39, 39)
                 .addComponent(texSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSair)
                     .addComponent(btnEntrar))
@@ -203,6 +205,6 @@ public class jfLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField texNome;
-    private javax.swing.JTextField texSenha;
+    private javax.swing.JPasswordField texSenha;
     // End of variables declaration//GEN-END:variables
 }

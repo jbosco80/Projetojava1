@@ -141,7 +141,9 @@ this.setExtendedState(MAXIMIZED_BOTH);
     }//GEN-LAST:event_jm_Cadastro_ProfessorActionPerformed
 
     private void jm_Cadastro_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_Cadastro_AlunoActionPerformed
-       
+        jfiAluno obj = new jfiAluno();
+        jdpPrincipal.add(obj);
+        obj.setVisible(true);
     }//GEN-LAST:event_jm_Cadastro_AlunoActionPerformed
 
     private void jm_Consulta_ProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_Consulta_ProfessorActionPerformed
